@@ -1,0 +1,110 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+  color: #20243a;
+}
+
+.dashboard {
+  max-width: 1150px;
+  margin: 40px auto;
+  padding: 25px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 20px;
+}
+
+.metric-card,
+.funnel-card,
+.threshold-section {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.metric-card h2 {
+  color: #5145cd;
+}
+
+.metric-card p,
+.funnel-section p {
+  color: #777;
+}
+
+.funnel-section,
+.threshold-section,
+.demo-controls {
+  margin-top: 30px;
+}
+
+.funnel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.funnel-card {
+  text-align: center;
+  border-bottom: 4px solid #5145cd;
+}
+
+.funnel-card h2 {
+  color: #5145cd;
+}
+
+button {
+  padding: 11px 16px;
+  margin: 8px 8px 8px 0;
+  border: none;
+  border-radius: 7px;
+  background: #5145cd;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #382e9e;
+}
+
+.message {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.error {
+  color: #dc2626;
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  header {
+    align-items: flex-start;
+    gap: 15px;
+    flex-direction: column;
+  }
+}
